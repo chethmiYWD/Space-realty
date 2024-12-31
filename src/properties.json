@@ -15,6 +15,7 @@
                 "year":2022
             },
             "googleMapLink": "https://www.google.com/maps?q=51.3860,0.1165",
+            "coordinates": [51.3860, 0.1165],
             "floorPlan": "./assets/floorplan1.jpg",
             "images": ["./assets/property1_1.jpeg", "./assets/property1_2.jpeg", "./assets/property1_3.jpg", "./assets/property1_4.jpg,", "./assets/property1_5.jpg", "./assets/property1_6.jpg"]
         },
@@ -33,6 +34,7 @@
                 "year":2022
             },
             "googleMapLink": "https://www.google.com/maps?q=51.3737,0.0893",
+            "coordinates": [51.3737, 0.0893],
             "floorPlan": "./assets/floorplan2.jpg",
             "images": ["./assets/property2_1.jpg", "./assets/property2_2.jpg", "./assets/property2_3.jpg", "./assets/property2_4.jpg", "./assets/property2_5.jpg", "./assets/property2_6.jpg"]
         },
@@ -51,6 +53,7 @@
                 "year": 2022
             },
             "googleMapLink": "https://www.google.com/maps?q=51.5203,-0.0973",
+            "coordinates": [51.5203, -0.0973],
             "floorPlan": "./assets/floorplan3.jpg",
             "images": ["./assets/property3_1.jpeg", "./assets/property3_2.jpeg", "./assets/property3_3.jpg", "./assets/property3_4.jpg", "./assets/property3_5.jpg", "./assets/property3_6.jpg"]
         },
@@ -69,6 +72,7 @@
                 "year": 2022
             },
             "googleMapLink": "https://www.google.com/maps?q=51.2763,0.1933",
+            "coordinates": [51.2763, 0.1933],
             "floorPlan": "./assets/floorplan4.jpg",
             "images": ["./assets/property4_1.jpeg", "./assets/property4_2.jpeg", "./assets/property4_3.jpg", "./assets/property4_4.jpg", "./assets/property4_5.jpg", "./assets/property4_6.jpg"]
         },
@@ -87,6 +91,7 @@
                 "year": 2022
             },
             "googleMapLink": "https://www.google.com/maps?q=51.2671,0.0721",
+            "coordinates": [51.2671, 0.0721],
             "floorPlan": "./assets/floorplan5.jpg",
             "images": ["./assets/property5_1.jpg", "./assets/property5_2.jpg", "./assets/property5_3.jpg", "./assets/property5_4.jpg", "./assets/property5_5.jpg", "./assets/property5_6.jpg"]
         },
@@ -105,6 +110,7 @@
                 "year": 2022
             },
             "googleMapLink": "https://www.google.com/maps?q=51.4632,-0.3018",
+            "coordinates": [51.4632, -0.3018],
             "floorPlan": "./assets/floorplan6.jpg",
             "images": ["./assets/property6_1.jpg", "./assets/property6_2.jpg", "./assets/property6_3.jpg", "./assets/property6_4.jpg", "./assets/property6_5.jpg", "./assets/property6_6.jpg"]
         },
@@ -123,6 +129,7 @@
                 "year": 2022
             },
             "googleMapLink": "https://www.google.com/maps?q=51.4826,-0.0098",
+            "coordinates": [51.4826, -0.0098],
             "floorPlan": "./assets/floorplan7.jpg",
             "images": ["./assets/property7_1.jpg", "./assets/property7_2.jpg", "./assets/property7_3.jpg", "./assets/property7_4.jpg", "./assets/property7_5.jpg", "./assets/property7_6.jpg"]
         },
@@ -141,6 +148,7 @@
                 "year": 2023
             },
             "googleMapLink": "https://www.google.com/maps?q=53.4508,-2.2297",
+            "coordinates": [53.4508, -2.2297],
             "floorPlan": "./assets/floorplan8.jpg",
             "images": ["./assets/property8_1.jpg", "./assets/property8_2.jpg", "./assets/property8_3.jpg", "./assets/property8_4.jpg", "./assets/property8_5.jpg", "./assets/property8_6.jpg"]
         },
@@ -159,6 +167,7 @@
                 "year": 2023
             },
             "googleMapLink": "https://www.google.com/maps?q=52.4814,-1.8998",
+            "coordinates": [52.4814, -1.8998],
             "floorPlan": "./assets/floorplan9.jpg",
             "images": ["./assets/property9_1.jpg", "./assets/property9_2.jpg", "./assets/property9_3.jpg", "./assets/property9_4.jpg", "./assets/property9_5.jpg", "./assets/property9_6.jpg"]
         }

@@ -3,6 +3,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import properties from './properties.json';
 import './PropertyDetails.css';
+import "leaflet/dist/leaflet.css";
+import LeafletMap from "./LeafletMap";
+
 
 const PropertyDetails = () => {
   const { id } = useParams();
@@ -81,20 +84,15 @@ const PropertyDetails = () => {
             />
           </div>
         );
-      case 'map':
-        return (
-          <div className="map-container">
-            <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
-              <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                center={center}
-                zoom={15}
-              >
-                <Marker position={center} />
-              </GoogleMap>
-            </LoadScript>
-          </div>
-        );
+      case "map":
+      return (
+        <div className="map-container">
+          <LeafletMap
+            latitude={property?.coordinates?.lat || 51.5074}
+            longitude={property?.coordinates?.lng || -0.1278}
+          />
+        </div>
+      );
       default:
         return null;
     }
