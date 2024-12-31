@@ -1,0 +1,90 @@
+.listings-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -20px;
+  }
+  
+  .listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
+  }
+  
+  .property-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: #0c162d;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .property-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .property-details {
+    padding: 15px;
+  }
+  
+  .property-details h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+  }
+  
+  .property-details p {
+    color: #666;
+    margin: 0 0 10px;
+  }
+  
+  .property-info {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .property-info span {
+    display: flex;
+    align-items: center;
+  }
+
+/* Favorite Icon Styling */
+.favorite-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.8rem; /* Slightly larger for emphasis */
+  color: #ccc; /* Default heart color */
+  cursor: pointer;
+  text-shadow: 0 0 1px black; /* Black border effect for the heart */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Active (Favorited) State */
+.favorite-icon.favorited {
+  color: red; /* Active favorite color */
+  text-shadow: 0 0 1px black; /* Keep the black border effect */
+}
+
+/* Hover Effect */
+.favorite-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  color: #888; /* Change color on hover for better feedback */
+}
+
+
+  
+  .property-image-container {
+    position: relative;
+  }

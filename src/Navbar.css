@@ -1,0 +1,166 @@
+/* Navbar.css */
+/* .navbar {
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding: 0.5rem 2rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0; 
+  } */
+
+  .navbar {
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;  /* Added to ensure full width */
+    right: 0;  /* Added to ensure full width */
+    width: 100%;  /* Added to ensure full width */
+    z-index: 1000;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    background-color: #0c162d;  /* Added background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Added shadow for depth */
+}
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem 0 2rem; /* Added padding to container instead */
+    max-width: 1800px; /* Optional: prevents the content from stretching too wide */
+    margin: 0 auto; /* Centers the container */
+}
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 6.5px;
+    text-transform: uppercase;
+    margin-left: 40px;
+    transform: scaleY(1.5);
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+    padding: 0;
+    margin-bottom: 0;
+    
+  }
+  
+  .nav-links li {
+    margin-left: 3rem;
+  }
+
+  .nav-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    color: #0c162d; /* Dark blue text */
+    background-color: #3bc4b4; /* Highlight */
+    padding: 0.75rem 1.25rem; /* Increase padding for more background space */
+  }
+  
+  .nav-button:active {
+    background-color: #2e9f8e; /* Slightly darker highlight when clicked */
+    color: #ffffff; /* Keep text white for contrast */
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3); /* Create a "pressed" effect */
+  }
+
+  .favourites-button {
+    color: #ffffff; /* Default color */
+    background: none; /* Transparent background */
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease, padding 0.3s ease;
+  }
+  
+  .favourites-button:hover {
+    color: #ff6b6b; /* Heart color on hover */
+    background: none;
+  }
+  
+  .favourites-button:active {
+    color: #e63946; /* Darker heart color when active */
+    background: none;
+  }
+
+  /* Hide hamburger menu on large screens */
+.burger-menu {
+  display: none;
+}
+  
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .navbar-container {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    .logo {
+      margin: 0 0 1rem 0;
+      text-align: center;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      margin-top: 1rem;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      margin: 1rem 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .burger-menu {
+      display: block;
+      cursor: pointer;
+      font-size: 2rem;
+      color: #ffffff;
+    }
+  
+    .burger-menu.active + .nav-links {
+      display: flex;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 2rem;
+    }
+  
+    .nav-button, .favourites-button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }

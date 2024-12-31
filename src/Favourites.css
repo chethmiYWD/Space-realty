@@ -1,0 +1,220 @@
+/* Favorites.css */
+
+.favorites-page {
+  padding: 45px;
+  background-color: #0c162d;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-left: 30px;
+}
+
+/* Responsive Grid Layout */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 cards per row */
+  gap: 20px; /* Add space between the cards */
+  margin-top: 20px;
+}
+
+/* Fav Property Card */
+.fav-property-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 400px;
+  margin: 20px;
+}
+
+.fav-property-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fav-property-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.fav-property-details {
+  padding: 15px;
+}
+
+.fav-property-details h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.fav-property-name {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.fav-property-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.delete-button, .view-details-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover, .view-details-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #d9534f;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+/* Back Button Styling */
+.back-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+/* Clear Favorites Button */
+.clear-favorites-button {
+background-color: #d9534f; 
+color: white;
+border: none;
+padding: 12px 20px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 20px;
+margin-left: 30px;
+transition: background-color 0.3s ease;
+}
+
+.clear-favorites-button:hover {
+background-color: #c9302c;
+}
+
+/* Add spacing between the buttons */
+.fav-property-actions button {
+margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .favorites-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+
+  .fav-property-card {
+      margin: 20px;
+  }
+
+  h2 {
+      font-size: 1.75rem;
+      margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust the layout for smaller screens */
+  .favorites-grid {
+      grid-template-columns: 1fr; /* 1 card per row on mobile */
+      gap: 15px;
+  }
+
+  .fav-property-card {
+      margin: 10px 0;
+      height: auto; /* Adjust card height */
+  }
+
+  .fav-property-details h3 {
+      font-size: 1.1rem;
+  }
+
+  .fav-property-name {
+      font-size: 1rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+      margin-left: 15px;
+  }
+
+  /* Adjust button sizes */
+  .delete-button, .view-details-button, .clear-favorites-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+  }
+
+  .back-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      margin-left: 15px;
+      margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 1.25rem;
+      margin-left: 10px;
+  }
+
+  .fav-property-card {
+      margin: 10px 0;
+      height: auto;
+  }
+
+  .fav-property-details h3 {
+      font-size: 1rem;
+  }
+
+  .fav-property-name {
+      font-size: 0.9rem;
+  }
+
+  /* Adjust button sizes */
+  .delete-button, .view-details-button, .clear-favorites-button {
+      font-size: 0.8rem;
+      padding: 8px 12px;
+  }
+
+  .back-button {
+      font-size: 0.8rem;
+      padding: 8px 12px;
+      margin-left: 10px;
+  }
+}
