@@ -60,6 +60,13 @@ function App() {
     }
   };
 
+  const handleContactFormSubmit = (e) => {
+    e.preventDefault();
+    // Add logic for handling the message submission (e.g., API call) here
+    alert('Message sent successfully!'); // Optional confirmation
+    navigate('/'); // Redirect to home page
+  };
+
   const handleReset = () => {
     setFilters({
       postcode: '',
