@@ -8,22 +8,22 @@ const Favourites = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const currentPath = window.location.pathname;
-    window.scrollTo(0, 0);
+    const loadFavorites = () => {
+      const savedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+      console.log('Saved favorites in localStorage:', savedFavorites); // Debug log
+    
+      const favoriteProperties = properties.properties.filter((property) =>
+        savedFavorites.includes(String(property.id)) // String comparison
+      );
+      console.log('Matched favorite properties:', favoriteProperties); // Debug log
+    
+      setFavorites(favoriteProperties);
+    };
 
-    // Reset favorites only when on the main page
-    if (currentPath === '/') {
-      localStorage.removeItem('favorites'); // Clear favorites
-    } else {
-      const savedFavorites = localStorage.getItem('favorites');
-      if (savedFavorites) {
-        const favoriteIds = JSON.parse(savedFavorites);
-        const favoriteProperties = properties.properties.filter((property) =>
-          favoriteIds.includes(property.id)
-        );
-        setFavorites(favoriteProperties);
-      }
-    }
+    loadFavorites();
+    window.addEventListener('favoritesUpdated', loadFavorites);
+  
+    return () => window.removeEventListener('favoritesUpdated', loadFavorites);
   }, []);
 
   const handleDelete = (id) => {
@@ -33,11 +33,17 @@ const Favourites = () => {
     // Save updated favorites to localStorage
     const updatedFavoriteIds = updatedFavorites.map((property) => property.id);
     localStorage.setItem('favorites', JSON.stringify(updatedFavoriteIds));
+
+    // Dispatch event to notify favorites updated
+    window.dispatchEvent(new Event('favoritesUpdated'));
   };
 
   const handleClearFavorites = () => {
     setFavorites([]); // Clear favorites state
     localStorage.removeItem('favorites'); // Remove favorites from localStorage
+
+    // Dispatch event to notify favorites updated
+    window.dispatchEvent(new Event('favoritesUpdated'));
   };
 
   const handleBack = () => {
@@ -47,7 +53,7 @@ const Favourites = () => {
   return (
     <div className="favorites-page">
       <button onClick={handleBack} className="back-button">Go Back</button> {/* Back Button */}
-      <h2>Your Favorites</h2>
+      <h2>Your Favorites ({favorites.length})</h2> {/* Show number of favorites */}
       
       {/* Clear Favorites Button */}
       {favorites.length > 0 && (

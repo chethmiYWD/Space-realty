@@ -78,7 +78,7 @@ const PropertyDetails = () => {
               className="floorplan-image"
               onError={(e) => {
                 e.target.onerror = null;
-                e.target.src = 'path/to/placeholder-image.jpg'; // Add a placeholder image path
+                e.target.src = 'path/to/placeholder-image.jpg'; 
                 e.target.alt = 'Floor plan not available';
               }}
             />

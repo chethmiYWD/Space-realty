@@ -132,6 +132,10 @@ background-color: #c9302c;
 margin-right: 10px;
 }
 
+.no-favorites p{
+  margin-left: 30px;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .favorites-grid {
