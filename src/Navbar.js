@@ -52,7 +52,7 @@ function Navbar() {
     e.currentTarget.classList.remove('drag-over');
   
     const propertyId = Number(e.dataTransfer.getData('text/plain'));
-    console.log('Dragged property ID:', propertyId); // Debug log
+    console.log('Dragged property ID:', propertyId); 
   
     // Validate if the dropped property ID is valid
     const validPropertyIds = properties.properties.map((property) => String(property.id));
@@ -62,12 +62,12 @@ function Navbar() {
       const newFavorites = [...currentFavorites, String(propertyId)];
       localStorage.setItem('favorites', JSON.stringify(newFavorites));
       window.dispatchEvent(new Event('favoritesUpdated'));
-      console.log('Added property ID to favorites:', propertyId); // Debug log
+      console.log('Added property ID to favorites:', propertyId); 
     } else {
-      console.log('Property ID already in favorites:', propertyId); // Debug log
+      console.log('Property ID already in favorites:', propertyId); 
     }
     } else {
-    console.log('Invalid property ID:', propertyId); // Debug log
+    console.log('Invalid property ID:', propertyId); 
     }
 
   };
