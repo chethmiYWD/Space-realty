@@ -4,28 +4,33 @@ import properties from './properties.json';
 import './Favourites.css';
 
 const Favourites = () => {
+  // State to store favorite properties
   const [favorites, setFavorites] = useState([]);
   const navigate = useNavigate();
 
+  // Load the favorite properties
   useEffect(() => {
     const loadFavorites = () => {
+      // Retrieve the saved favorite property IDs from localStorage
       const savedFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-      console.log('Saved favorites in localStorage:', savedFavorites); // Debug log
     
+      // Find the properties that match the saved favorite IDs
       const favoriteProperties = properties.properties.filter((property) =>
         savedFavorites.includes(String(property.id)) // String comparison
       );
-      console.log('Matched favorite properties:', favoriteProperties); // Debug log
     
+      // Update the favorites state with the matched properties
       setFavorites(favoriteProperties);
     };
 
+    // Function to load favourites
     loadFavorites();
     window.addEventListener('favoritesUpdated', loadFavorites);
   
     return () => window.removeEventListener('favoritesUpdated', loadFavorites);
   }, []);
 
+  // Handle removing a property from favorites
   const handleDelete = (id) => {
     const updatedFavorites = favorites.filter((property) => property.id !== id);
     setFavorites(updatedFavorites);
@@ -38,6 +43,7 @@ const Favourites = () => {
     window.dispatchEvent(new Event('favoritesUpdated'));
   };
 
+  // Handle clearing all favorites
   const handleClearFavorites = () => {
     setFavorites([]); // Clear favorites state
     localStorage.removeItem('favorites'); // Remove favorites from localStorage
@@ -46,6 +52,7 @@ const Favourites = () => {
     window.dispatchEvent(new Event('favoritesUpdated'));
   };
 
+  // Handle the back button click
   const handleBack = () => {
     navigate(-1); // Go back to the previous page
   };
@@ -62,6 +69,7 @@ const Favourites = () => {
         </button>
       )}
       
+      {/* Display message if no favorites are present */}
       {favorites.length === 0 ? (
         <div className="no-favorites">
           <p>No favorites yet!</p>
@@ -70,18 +78,22 @@ const Favourites = () => {
         <div className="favorites-grid">
           {favorites.map((property) => (
             <div key={property.id} className="fav-property-card">
+              {/* Display property image */}
               <img
                 src={require(`../src${property.images[0].substring(1)}`)}
                 alt={`${property.type} in ${property.location}`}
                 className="fav-property-image"
               />
               <div className="fav-property-details">
+                {/* Display property details */}
                 <h3>{property.type} in {property.location}</h3>
                 <p className="fav-property-name">{property.name}</p>
                 <div className="fav-property-actions">
+                  {/* Delete button to remove property from favorites */}
                   <button onClick={() => handleDelete(property.id)} className="delete-button">
                     Delete
                   </button>
+                  {/* View Details button to navigate to property details page */}
                   <button onClick={() => navigate(`/property/${property.id}`)} className="view-details-button">
                     View Details
                   </button>
