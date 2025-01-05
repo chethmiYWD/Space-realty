@@ -92,6 +92,7 @@ h2 {
 
 /* Back Button Styling */
 .back-button {
+  position: relative;
   background-color: #6c757d;
   color: white;
   border: none;
@@ -103,6 +104,7 @@ h2 {
   margin-top: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  z-index: 10;
 }
 
 .back-button:hover {
@@ -139,86 +141,101 @@ margin-right: 10px;
 /* Responsive Design */
 @media (max-width: 1024px) {
   .favorites-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
   }
 
   .fav-property-card {
-      margin: 20px;
+    margin: 20px;
   }
 
   h2 {
-      font-size: 1.75rem;
-      margin-left: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Adjust the layout for smaller screens */
-  .favorites-grid {
-      grid-template-columns: 1fr; /* 1 card per row on mobile */
-      gap: 15px;
-  }
-
-  .fav-property-card {
-      margin: 10px 0;
-      height: auto; /* Adjust card height */
-  }
-
-  .fav-property-details h3 {
-      font-size: 1.1rem;
-  }
-
-  .fav-property-name {
-      font-size: 1rem;
-  }
-
-  h2 {
-      font-size: 1.5rem;
-      margin-left: 15px;
-  }
-
-  /* Adjust button sizes */
-  .delete-button, .view-details-button, .clear-favorites-button {
-      font-size: 0.9rem;
-      padding: 8px 16px;
+    font-size: 1.75rem;
+    margin-left: 20px;
   }
 
   .back-button {
-      font-size: 0.9rem;
-      padding: 8px 16px;
-      margin-left: 15px;
-      margin-top: 40px;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    margin-left: 15px;
+    margin-top: 60px; /* Adjust to prevent overlap */
   }
 }
 
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 15px;
+  }
+
+  .fav-property-card {
+    margin: 10px 0;
+    height: auto; /* Adjust card height for mobile */
+  }
+
+  .fav-property-details h3 {
+    font-size: 1.1rem;
+  }
+
+  .fav-property-name {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-left: 15px;
+  }
+
+  .delete-button,
+  .view-details-button,
+  .clear-favorites-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .back-button {
+    position: fixed; /* Fix position to prevent overlap */
+    bottom: 20px; /* Position it near the bottom */
+    left: 15px; /* Align it to the left */
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    z-index: 1000; /* Ensure it stays above all other elements */
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
   h2 {
-      font-size: 1.25rem;
-      margin-left: 10px;
+    font-size: 1.25rem;
+    margin-left: 10px;
   }
 
   .fav-property-card {
-      margin: 10px 0;
-      height: auto;
+    margin: 10px 0;
+    height: auto;
   }
 
   .fav-property-details h3 {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .fav-property-name {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
-  /* Adjust button sizes */
-  .delete-button, .view-details-button, .clear-favorites-button {
-      font-size: 0.8rem;
-      padding: 8px 12px;
+  .delete-button,
+  .view-details-button,
+  .clear-favorites-button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
   }
 
   .back-button {
-      font-size: 0.8rem;
-      padding: 8px 12px;
-      margin-left: 10px;
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    z-index: 1000; /* Ensure it stays on top */
   }
 }
