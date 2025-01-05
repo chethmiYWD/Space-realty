@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import properties from './properties.json';
+import properties from './properties.json'; // Importing property data
 import './PropertyDetails.css';
 import "leaflet/dist/leaflet.css";
-import LeafletMap from "./LeafletMap";
+import LeafletMap from "./LeafletMap"; // Importing the custom Leaflet map component
 
 
 const PropertyDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const property = properties.properties.find((prop) => prop.id.toString() === id);
-  const [selectedImage, setSelectedImage] = useState(property?.images[0] || '');
+  const [selectedImage, setSelectedImage] = useState(property?.images[0] || ''); // State for the selected property image
   const [activeTab, setActiveTab] = useState('photos');
 
   // Map configuration
@@ -30,6 +29,7 @@ const PropertyDetails = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // If the property is not found, display a "Property not found" message
   if (!property) {
     return (
       <div className="property-details-page">
@@ -87,6 +87,7 @@ const PropertyDetails = () => {
       case "map":
       return (
         <div className="map-container">
+          {/* Leaflet map component with the property's coordinates */}
           <LeafletMap
             latitude={property?.coordinates?.lat || 51.5074}
             longitude={property?.coordinates?.lng || -0.1278}
