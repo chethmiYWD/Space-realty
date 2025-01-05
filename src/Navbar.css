@@ -1,116 +1,105 @@
-/* Navbar.css */
-/* .navbar {
-    color: #ffffff;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    padding: 0.5rem 2rem; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0; 
-  } */
-
-  .navbar {
-    color: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;  /* Added to ensure full width */
-    right: 0;  /* Added to ensure full width */
-    width: 100%;  /* Added to ensure full width */
-    z-index: 1000;
-    padding: 0.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    background-color: #0c162d;  /* Added background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Added shadow for depth */
+/* Styles for navigation bar */
+.navbar {
+  color: #ffffff;
+  position: fixed; /* Fixed position at the top */
+  top: 0;
+  left: 0;  
+  right: 0;  
+  width: 100%; /* Full width of the screen */
+  z-index: 1000;
+  padding: 0.5rem 0;
+  display: flex; /* Flexbox layout for navbar */
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  background-color: #0c162d;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
 }
 
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 2rem 0 2rem; /* Added padding to container instead */
-    max-width: 1800px; /* Optional: prevents the content from stretching too wide */
-    margin: 0 auto; /* Centers the container */
+.navbar-container {
+  display: flex; /* Flexbox layout for container */
+  justify-content: space-between; /* Space between logo and nav links */
+  align-items: center; /* Center items vertically */
+  width: 100%;
+  padding: 0 2rem 0 2rem; 
+  max-width: 1800px; 
+  margin: 0 auto;
 }
-  
-  .logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    letter-spacing: 6.5px;
-    text-transform: uppercase;
-    margin-left: 40px;
-    transform: scaleY(1.5);
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    margin-right: 30px;
-    padding: 0;
-    margin-bottom: 0;
-    
-  }
-  
-  .nav-links li {
-    margin-left: 3rem;
-  }
 
-  .nav-button {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
-  }
-  
-  .nav-button:hover {
-    color: #0c162d; /* Dark blue text */
-    background-color: #3bc4b4; /* Highlight */
-    padding: 0.75rem 1.25rem; /* Increase padding for more background space */
-  }
-  
-  .nav-button:active {
-    background-color: #2e9f8e; /* Slightly darker highlight when clicked */
-    color: #ffffff; /* Keep text white for contrast */
-    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3); /* Create a "pressed" effect */
-  }
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 6.5px;
+  text-transform: uppercase;
+  margin-left: 40px;
+  transform: scaleY(1.5); /* Vertically stretch the logo */
+}
 
-  .favourites-button {
-    color: #ffffff; /* Default color */
-    background: none; /* Transparent background */
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease, padding 0.3s ease;
-  }
-  
-  .favourites-button:hover {
-    color: #ff6b6b; /* Heart color on hover */
-    background: none;
-  }
-  
-  .favourites-button:active {
-    color: #e63946; /* Darker heart color when active */
-    background: none;
-  }
+.nav-links {
+  display: flex; /* Flexbox layout for nav links */
+  list-style: none;
+  margin-right: 30px;
+  padding: 0;
+  margin-bottom: 0;
+}
 
-  /* Hide hamburger menu on large screens */
+.nav-links li {
+  margin-left: 3rem;
+}
+
+/* Navigation Button Styling */
+.nav-button {
+  background: none; /* Transparent background */
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+}
+
+/* Hover effect for navigation button */
+.nav-button:hover {
+  color: #0c162d; 
+  background-color: #3bc4b4;
+  padding: 0.75rem 1.25rem; 
+}
+
+/* Active state for navigation button */
+.nav-button:active {
+  background-color: #2e9f8e; 
+  color: #ffffff; 
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.favourites-button {
+  color: #ffffff; 
+  background: none; /* Transparent background */
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease, padding 0.3s ease;
+}
+
+.favourites-button:hover {
+  color: #ff6b6b; /* Heart color on hover */
+  background: none;
+}
+
+.favourites-button:active {
+  color: #e63946; /* Darker heart color when active */
+  background: none;
+}
+
+/* Hide hamburger menu on large screens */
 .burger-menu {
   display: none;
 }
   
-  /* Large Tablets (up to 1024px) */
 @media screen and (max-width: 1024px) {
   .navbar-container {
     padding: 0 1.5rem;
@@ -136,7 +125,6 @@
   }
 }
 
-/* Tablets and Small Tablets (up to 768px) */
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 0.8rem 0;
@@ -207,7 +195,6 @@
   }
 }
 
-/* Mobile Devices (up to 480px) */
 @media screen and (max-width: 480px) {
   .navbar {
     padding: 0.5rem 0;
@@ -235,7 +222,6 @@
     font-size: 1.2rem;
   }
 
-  /* Adjust fav-count positioning for mobile */
   .fav-count {
     font-size: 0.8rem;
     position: absolute;
