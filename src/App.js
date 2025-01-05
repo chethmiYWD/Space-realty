@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
 import Navbar from './Navbar';
 import PropertyDetails from './PropertyDetails';
 import PropertyList from './PropertyList';
@@ -60,13 +59,6 @@ function App() {
     }
   };
 
-  const handleContactFormSubmit = (e) => {
-    e.preventDefault();
-    // Add logic for handling the message submission (e.g., API call) here
-    alert('Message sent successfully!'); // Optional confirmation
-    navigate('/'); // Redirect to home page
-  };
-
   const handleReset = () => {
     setFilters({
       postcode: '',
@@ -79,6 +71,11 @@ function App() {
       dateTo: '',
     });
     setResults(properties.properties); // Reset results to show all properties
+  };
+
+  const handleContactFormSubmit = (e) => {
+    e.preventDefault();
+    alert('Message sent successfully!');
   };
 
   return (
@@ -226,7 +223,7 @@ function App() {
                     <div className="contact-info">
                       <div className="contact-form">
                         <h3>Send us a Message</h3>
-                        <form>
+                        <form onSubmit={handleContactFormSubmit}>
                           <input type="text" placeholder="Your Name" />
                           <input type="email" placeholder="Your Email" />
                           <textarea placeholder="Your Message"></textarea>
