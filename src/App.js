@@ -5,12 +5,13 @@ import PropertyDetails from './PropertyDetails';
 import PropertyList from './PropertyList';
 import PropertyImage from './assets/bg-image.jpg';
 import properties from './properties.json';
-import Favourites from './Favourites'; // Import Favourites component
-import { DatePicker } from 'react-widgets'; // Import DatePicker from react-widgets
-import 'react-widgets/styles.css'; // Import styles for react-widgets
+import Favourites from './Favourites'; 
+import { DatePicker } from 'react-widgets'; // DatePicker from react-widgets
+import 'react-widgets/styles.css'; //Styles for react-widgets
 import './styles.css';
 
 function App() {
+   // State to manage filter inputs for property search
   const [filters, setFilters] = useState({
     type: '',
     minPrice: '',
@@ -22,16 +23,20 @@ function App() {
     dateTo: '',
   });
 
+  // State to hold filtered property results
   const [results, setResults] = useState(properties.properties);
 
+  // Handle changes in filter input fields
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
   };
 
+  // Handle search form submission and filter properties
   const handleSearch = (e) => {
     e.preventDefault();
 
+    // Filter properties based on filter criteria
     const filtered = properties.properties.filter((property) => {
       const propertyDate = new Date(
         `${property.added.year}-${property.added.month}-${property.added.day}`
@@ -59,6 +64,7 @@ function App() {
     }
   };
 
+  // Handle form reset to clear filters and show all properties
   const handleReset = () => {
     setFilters({
       postcode: '',
@@ -70,9 +76,10 @@ function App() {
       dateFrom: '',
       dateTo: '',
     });
-    setResults(properties.properties); // Reset results to show all properties
+    setResults(properties.properties); 
   };
 
+  // Handle contact form submission
   const handleContactFormSubmit = (e) => {
     e.preventDefault();
     alert('Message sent successfully!');
