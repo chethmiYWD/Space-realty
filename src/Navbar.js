@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Navbar.css'; // For styling
-import { FaHeart } from 'react-icons/fa'; 
+import { FaHeart } from 'react-icons/fa';   // Heart icon for favorites button
 import { useNavigate } from 'react-router-dom'; 
 import properties from './properties.json';
 
@@ -22,7 +22,7 @@ function Navbar() {
     return () => window.removeEventListener('favoritesUpdated', updateFavCount);
   }, []);
 
-  // Keep your existing scroll function
+  // Scroll function to smoothly scroll to different sections of the page
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     const offset = 60;
@@ -37,7 +37,7 @@ function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
-  // Add drag and drop handlers
+  // Drag and drop handlers
   const handleDragOver = (e) => {
     e.preventDefault();
     e.currentTarget.classList.add('drag-over'); // Add visual cue
@@ -54,20 +54,21 @@ function Navbar() {
     const propertyId = Number(e.dataTransfer.getData('text/plain'));
     console.log('Dragged property ID:', propertyId); // Debug log
   
+    // Validate if the dropped property ID is valid
     const validPropertyIds = properties.properties.map((property) => String(property.id));
-if (validPropertyIds.includes(String(propertyId))) {
-  const currentFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-  if (!currentFavorites.includes(String(propertyId))) {
-    const newFavorites = [...currentFavorites, String(propertyId)];
-    localStorage.setItem('favorites', JSON.stringify(newFavorites));
-    window.dispatchEvent(new Event('favoritesUpdated'));
-    console.log('Added property ID to favorites:', propertyId); // Debug log
-  } else {
-    console.log('Property ID already in favorites:', propertyId); // Debug log
-  }
-} else {
-  console.log('Invalid property ID:', propertyId); // Debug log
-}
+    if (validPropertyIds.includes(String(propertyId))) {
+    const currentFavorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    if (!currentFavorites.includes(String(propertyId))) {
+      const newFavorites = [...currentFavorites, String(propertyId)];
+      localStorage.setItem('favorites', JSON.stringify(newFavorites));
+      window.dispatchEvent(new Event('favoritesUpdated'));
+      console.log('Added property ID to favorites:', propertyId); // Debug log
+    } else {
+      console.log('Property ID already in favorites:', propertyId); // Debug log
+    }
+    } else {
+    console.log('Invalid property ID:', propertyId); // Debug log
+    }
 
   };
   
@@ -78,10 +79,12 @@ if (validPropertyIds.includes(String(propertyId))) {
       <div className="navbar-container">
         <h1 className="logo">Space Realty</h1>
         
+        {/* Mobile menu button */}
         <button className={`burger-menu ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           ☰
         </button>
         
+        {/* Navigation links */}
         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <li>
             <button onClick={() => scrollToSection('home')} className="nav-button">
@@ -103,6 +106,7 @@ if (validPropertyIds.includes(String(propertyId))) {
               Contact
             </button>
           </li>
+          {/* Favorites button */}
           <li>
             <button
               onClick={() => navigate('/favourites')}
