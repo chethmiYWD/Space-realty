@@ -1,115 +1,117 @@
-  .property-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .property-card {
-    background: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    color: #0c162d;
-  }
-  
-  .property-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .property-image-container img {
-    width: 100%;
-    height: 200px; /* Adjust for consistent height */
-    object-fit: cover;
-    border-bottom: 2px solid #eee;
-  }
-  
-  .property-details {
-    padding: 10px; /* Slightly smaller padding */
-  }
-  
-  .property-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #2a9d8f;
-    margin: 2px 0; 
-  }
-  
-  .property-details p:nth-of-type(2) {
-    font-size: 1rem;
-    color: #555;
-    margin: 1px 0; 
-  }
-  
-  .property-details p:nth-of-type(3) {
-    font-size: 0.9rem;
-    color: #888;
-  }
-  
-  .favorite-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    font-size: 1.8rem; /* Size of the heart */
-    color: #ccc; /* Default heart color */
-    cursor: pointer;
-    text-shadow: 0 0 1px black; /* Black border effect for the heart */
-    transition: color 0.3s ease, transform 0.3s ease;
-    background: none; /* Ensure no background */
-    border: none; /* Remove any border */
-    padding: 0; /* Remove any padding */
-    outline: none; /* Remove focus outline if any */
-  }
-  
-  .favorite-button.active {
-    color: red; /* Active favorite color */
-    text-shadow: 0 0 1px black; /* Keep the black border effect */
-  }
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Property Card Styles */
+.property-card {
+  background: #ffffff;
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow content */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer;
+  color: #0c162d;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.property-image-container img {
+  width: 100%;
+  height: 200px; /* Adjust for consistent height */
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+}
+
+.property-details {
+  padding: 10px; /* Slightly smaller padding */
+}
+
+.property-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2a9d8f;
+  margin: 2px 0; 
+}
+
+.property-details p:nth-of-type(2) {
+  font-size: 1rem;
+  color: #555;
+  margin: 1px 0; 
+}
+
+.property-details p:nth-of-type(3) {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Favorite Button */
+.favorite-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.8rem; /* Size of the heart */
+  color: #ccc; /* Heart color */
+  cursor: pointer;
+  text-shadow: 0 0 1px black; /* Black border effect for the heart */
+  transition: color 0.3s ease, transform 0.3s ease;
+  background: none; 
+  border: none; 
+  padding: 0;
+  outline: none; 
+}
+
+.favorite-button.active {
+  color: red; /* Active favorite color */
+  text-shadow: 0 0 1px black; 
+}
   
   /* Hover Effect */
 .favorite-button:hover {
   transform: scale(1.2); /* Slightly enlarge on hover */
-  color: #888; /* Change color on hover for better feedback */
+  color: #888; 
 }
   
-  .listings-section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: -20px;
-  }
-  
-  .listings-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 20px 0;
-  }
-  
-  .property-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
-  
-  .property-info {
-    display: flex;
-    gap: 15px;
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .property-info span {
-    display: flex;
-    align-items: center;
-  }
-  
-  .property-image-container {
-    position: relative;
-  }
+.listings-section {
+  padding: 40px 20px; /* Padding around the listings section */
+  max-width: 1200px; /* Maximum width for the section */
+  margin: 0 auto;
+  margin-top: -20px;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.property-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.property-info {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.property-info span {
+  display: flex;
+  align-items: center;
+}
+
+.property-image-container {
+  position: relative;
+}
   

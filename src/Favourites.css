@@ -3,7 +3,7 @@
   padding: 45px;
   background-color: #0c162d;
   font-family: Arial, sans-serif;
-  min-height: 100vh;
+  min-height: 100vh; /* Page takes full height */
 }
 
 h2 {
@@ -16,15 +16,15 @@ h2 {
 .favorites-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);  /* 3 cards per row */
-  gap: 20px; 
+  gap: 20px; /* Space between cards */
   margin-top: 20px;
 }
 
 /* Fav Property Card */
 .fav-property-card {
-  background-color: #fff;
+  background-color: #fff; /* White background for the card */
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; /* Hide overflow from image or content */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 360px;
@@ -32,7 +32,7 @@ h2 {
 }
 
 .fav-property-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* Move card up on hover */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -75,7 +75,7 @@ h2 {
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
 .delete-button:hover, .view-details-button:hover {

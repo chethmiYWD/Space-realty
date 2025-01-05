@@ -21,31 +21,27 @@ body {
 /* Home Section */
 .home-section {
   display: flex;
-  flex-direction: column; /* Stack the main content and search form vertically */
+  flex-direction: column; 
   align-items: center;
   justify-content: flex-start;
-  height: auto; /* Adjust height dynamically */
-  /* padding-top: 4rem;  */
-  text-align: center; /* Align text to the center */
-  /* min-height: calc(100vh - 80px); */
+  height: auto; 
+  text-align: center; 
 }
 
 .home-content {
   display: flex;
-  flex-direction: row; /* Ensure text and image are side-by-side */
+  flex-direction: row; 
   justify-content: space-between;
   align-items: center;
-  gap: 2rem; /* Add space between text and image */
-  width: 90%; /* Center the content within a constrained width */
-  /* max-width: 1200px; */
+  gap: 2rem; 
+  width: 90%; 
   margin: 0 auto; 
-  /* margin-top: -40px; */
   flex-wrap: wrap;
 }
 
 .home-text {
-  flex: 1; /* Make text take equal space */
-  text-align: left; /* Align text to the left */
+  flex: 1; 
+  text-align: left; 
 }
 
 .home-text h2 {
@@ -57,9 +53,8 @@ body {
 }
 
 .home-image {
-  flex: 1; /* Make image take equal space */
+  flex: 1; 
 }
-
 
 .home-image img {
   width: 800px;
@@ -71,17 +66,14 @@ body {
 
 /* Search Form Container */
 .search-container {
-  margin: 2rem auto; /* Changed from margin-top to margin to center horizontally */
+  margin: 2rem auto; 
   padding: 2rem;
   background-color: #d6d6e3;
   border-radius: 8px;
-  width: 90%; /* Changed from 100% to 90% for better mobile display */
+  width: 90%;
   max-width: 800px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
-  /* position: relative; 
-  left: 50%; 
-  transform: translateX(-50%);  */
 }
 
 .search-container h3 {
@@ -109,13 +101,13 @@ body {
 .search-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Space between the buttons */
+  gap: 10px;
   margin-top: 7px;
   width: 100%;
 }
 
 .search-button {
-  flex: 4; /* Wider button */
+  flex: 4; 
   padding: 0.75rem 2rem;
   font-size: 1rem;
   background-color: #3bc4b4;
@@ -131,7 +123,7 @@ body {
 }
 
 .reset-button {
-  flex: 1; /* Narrower button */
+  flex: 1; 
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   background-color: #f44336;
@@ -155,18 +147,16 @@ body {
   
   .search-form select,
   .search-form input {
-    flex: 1 1 100%; /* Stack inputs vertically on mobile */
+    flex: 1 1 100%; 
   }
 }
 
-
-
 #home {
-  padding-top: 5rem; /* Creates space for the navbar */
+  padding-top: 5rem;
 }
 
 #listings, #about, #contact {
-  padding-top: 4rem; /* Ensures content starts below navbar */
+  padding-top: 4rem; 
 }
 
 /* Other Section Styling */
@@ -180,18 +170,12 @@ body {
   margin-left: 15px;
 }
 
-
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 1rem;
 }
 
-.property-card {
-  background: #ffffff;
-}
-
-/* Responsive Design */
 @media (max-width: 1200px) {
   .property-list {
       grid-template-columns: repeat(2, 1fr);
