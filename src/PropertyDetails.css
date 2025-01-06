@@ -1,8 +1,10 @@
 .property-details-page {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto; /* Margin around the container */
   padding: 30px 20px;
   background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Back Button */
