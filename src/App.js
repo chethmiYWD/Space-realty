@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import DOMPurify from 'dompurify'; // Import DOMPurify for sanitization
 import Navbar from './Navbar';
 import PropertyDetails from './PropertyDetails';
 import PropertyList from './PropertyList';
@@ -7,11 +8,11 @@ import PropertyImage from './assets/bg-image.jpg';
 import properties from './properties.json';
 import Favourites from './Favourites'; 
 import { DatePicker } from 'react-widgets'; // DatePicker from react-widgets
-import 'react-widgets/styles.css'; //Styles for react-widgets
+import 'react-widgets/styles.css'; // Styles for react-widgets
 import './styles.css';
 
 function App() {
-   // State to manage filter inputs for property search
+  // State to manage filter inputs for property search
   const [filters, setFilters] = useState({
     type: '',
     minPrice: '',
@@ -23,19 +24,18 @@ function App() {
     dateTo: '',
   });
 
-  // State to hold filtered property results
+    // State to hold filtered property results
   const [results, setResults] = useState(properties.properties);
 
   // Handle changes in filter input fields
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFilters((prevFilters) => ({ ...prevFilters, [name]: value }));
+    setFilters((prevFilters) => ({ ...prevFilters, [name]: DOMPurify.sanitize(value) })); // Sanitize input
   };
 
-  // Handle search form submission and filter properties
   const handleSearch = (e) => {
     e.preventDefault();
-
+    
     // Filter properties based on filter criteria
     const filtered = properties.properties.filter((property) => {
       const propertyDate = new Date(
@@ -43,7 +43,7 @@ function App() {
       );
       const fromDate = filters.dateFrom ? new Date(filters.dateFrom) : null;
       const toDate = filters.dateTo ? new Date(filters.dateTo) : null;
-
+  
       return (
         (!filters.type || property.type.toLowerCase() === filters.type.toLowerCase()) &&
         (!filters.minPrice || property.price >= parseInt(filters.minPrice)) &&
@@ -56,27 +56,24 @@ function App() {
         (!toDate || propertyDate <= toDate)
       );
     });
+  
+    // Update the results with the filtered properties or an empty array if none match
+    setResults(filtered);
+  };  
 
-    if (Object.values(filters).every((value) => value === '')) {
-      setResults(properties.properties); // Show all properties by default
-    } else {
-      setResults(filtered); // Show filtered properties
-    }
-  };
-
-  // Handle form reset to clear filters and show all properties
+  // Reset form to clear filters and show all properties
   const handleReset = () => {
     setFilters({
-      postcode: '',
       type: '',
       minPrice: '',
       maxPrice: '',
       minBedrooms: '',
       maxBedrooms: '',
+      postcode: '',
       dateFrom: '',
       dateTo: '',
     });
-    setResults(properties.properties); 
+    setResults(properties.properties);
   };
 
   // Handle contact form submission

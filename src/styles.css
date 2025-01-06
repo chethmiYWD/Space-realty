@@ -166,7 +166,7 @@ body {
   padding: 2rem;
 }
 
-.listings-section h2, .results-count p{
+.listings-section h2, .listings-section p, .results-count p{
   margin-left: 15px;
 }
 
