@@ -15,14 +15,13 @@ React: A JavaScript library for building user interfaces.
 React Router: For navigating between different pages in the app.
 React Icons: For using vector icons (e.g., heart icon for favorites).
 Leaflet: A mapping library for rendering interactive maps.
-Google Maps API: Used for displaying maps in the PropertyDetails page.
 CSS: Custom styles for the app's layout and design.
 Installation
 Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/property-listings.git
+git clone https://github.com/chethmiYWD/Space-realty.git
 Navigate to the project directory:
 
 bash
@@ -40,26 +39,6 @@ Copy code
 npm start
 The app should now be available at http://localhost:3000.
 
-File Structure
-plaintext
-Copy code
-├── src/
-│   ├── components/
-│   │   ├── PropertyDetails.js
-│   │   ├── PropertyList.js
-│   │   ├── LeafletMap.js
-│   ├── assets/
-│   │   ├── floorplan1.jpg
-│   │   ├── floorplan2.jpg
-│   ├── data/
-│   │   ├── properties.json
-│   ├── App.js
-│   ├── index.js
-│   ├── Listings.css
-│   └── PropertyDetails.css
-├── public/
-│   ├── index.html
-└── package.json
 Components
 1. PropertyList.js
 Description: Displays a list of properties with the ability to mark them as favorites.
@@ -121,6 +100,5 @@ Create a new branch (git checkout -b feature/your-feature).
 Commit your changes (git commit -am 'Add new feature').
 Push to the branch (git push origin feature/your-feature).
 Create a new Pull Request.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
 
