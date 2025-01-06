@@ -203,6 +203,7 @@
   font-size: 16px;
   line-height: 1.6;
   color: #495057;
+  text-align: justify;
 }
 
 /* Responsive Design */
@@ -214,6 +215,11 @@
   .back-button-details-page {
     margin-left: 15px;
     margin-top: 90px; 
+  }
+
+  .property-thumbnail {
+    width: 130px; 
+    height: 130px;
   }
 }
 
