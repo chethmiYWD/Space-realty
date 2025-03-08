@@ -2,6 +2,7 @@
   "name": "space-realty",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://chethmiywd.github.io/space-realty/",
   "dependencies": {
     "@react-google-maps/api": "^2.20.5",
     "cra-template": "1.2.0",
@@ -23,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +48,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.1.0"
+    "@testing-library/react": "^16.1.0",
+    "gh-pages": "^5.0.0"
   }
 }
