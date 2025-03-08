@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import properties from './properties.json';
+import properties from './new/properties.json';
 import './Favourites.css';
 
 const Favourites = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import properties from './properties.json'; // Importing property data
+import properties from './new/properties.json'; // Importing property data
 import './PropertyDetails.css';
 import "leaflet/dist/leaflet.css";
 import LeafletMap from "./LeafletMap"; // Importing the custom Leaflet map component
