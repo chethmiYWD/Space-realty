@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import PropertyDetails from './PropertyDetails';
 import PropertyList from './PropertyList';
 import PropertyImage from './assets/bg-image.jpg';
-import properties from './properties.json';
+import properties from './new/properties.json';
 import Favourites from './Favourites'; 
 import { DatePicker } from 'react-widgets'; // DatePicker from react-widgets
 import 'react-widgets/styles.css'; // Styles for react-widgets

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './Navbar.css'; // For styling
 import { FaHeart } from 'react-icons/fa';   // Heart icon for favorites button
 import { useNavigate } from 'react-router-dom'; 
-import properties from './properties.json';
+import properties from './new/properties.json';
 
 function Navbar() {
   const navigate = useNavigate();
