@@ -16,6 +16,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=51.3860,0.1165",
             "coordinates": [51.3860, 0.1165],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2489.9278912980462!2d0.11392507611978128!3d51.386003319565134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDIzJzA5LjYiTiAwwrAwNic1OS40IkU!5e0!3m2!1sen!2slk!4v1738074570201!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan1.jpg",
             "images": ["./assets/property1_1.jpeg", "./assets/property1_2.jpeg", "./assets/property1_3.jpg", "./assets/property1_4.jpg", "./assets/property1_5.jpg", "./assets/property1_6.jpg"]
         },
@@ -35,6 +36,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=51.3737,0.0893",
             "coordinates": [51.3737, 0.0893],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2490.597268921629!2d0.08929999999999999!3d51.3737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDIyJzI1LjMiTiAwwrAwNScyMS41IkU!5e0!3m2!1sen!2slk!4v1738075244745!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan2.jpg",
             "images": ["./assets/property2_1.jpg", "./assets/property2_2.jpg", "./assets/property2_3.jpg", "./assets/property2_4.jpg", "./assets/property2_5.jpg", "./assets/property2_6.jpg"]
         },
@@ -54,6 +56,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=51.5203,-0.0973",
             "coordinates": [51.5203, -0.0973],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2482.6138512082534!2d-0.0973!3d51.5203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDMxJzEzLjEiTiAwwrAwNSc1MC4zIlc!5e0!3m2!1sen!2slk!4v1738075303191!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan3.jpg",
             "images": ["./assets/property3_1.jpeg", "./assets/property3_2.jpeg", "./assets/property3_3.jpg", "./assets/property3_4.jpg", "./assets/property3_5.jpg", "./assets/property3_6.jpg"]
         },
@@ -73,6 +76,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=51.2763,0.1933",
             "coordinates": [51.2763, 0.1933],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2495.892383013688!2d0.19330000000000003!3d51.2763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDE2JzM0LjciTiAwwrAxMSczNS45IkU!5e0!3m2!1sen!2slk!4v1738075425967!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan4.jpg",
             "images": ["./assets/property4_1.jpeg", "./assets/property4_2.jpeg", "./assets/property4_3.jpg", "./assets/property4_4.jpg", "./assets/property4_5.jpg", "./assets/property4_6.jpg"]
         },
@@ -92,6 +96,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=51.2671,0.0721",
             "coordinates": [51.2671, 0.0721],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2496.392164949249!2d0.0721!3d51.2671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDE2JzAxLjYiTiAwwrAwNCcxOS42IkU!5e0!3m2!1sen!2slk!4v1738075483800!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan5.jpg",
             "images": ["./assets/property5_1.jpg", "./assets/property5_2.jpg", "./assets/property5_3.jpg", "./assets/property5_4.jpg", "./assets/property5_5.jpg", "./assets/property5_6.jpg"]
         },
@@ -111,6 +116,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=51.4632,-0.3018",
             "coordinates": [51.4632, -0.3018],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2485.7252895493634!2d-0.30179999999999996!3d51.46319999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDI3JzQ3LjUiTiAwwrAxOCcwNi41Ilc!5e0!3m2!1sen!2slk!4v1738075557457!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan6.jpg",
             "images": ["./assets/property6_1.jpg", "./assets/property6_2.jpg", "./assets/property6_3.jpg", "./assets/property6_4.jpg", "./assets/property6_5.jpg", "./assets/property6_6.jpg"]
         },
@@ -130,6 +136,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=51.4826,-0.0098",
             "coordinates": [51.4826, -0.0098],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2484.6684401318985!2d-0.0098!3d51.4826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDI4JzU3LjQiTiAwwrAwMCczNS4zIlc!5e0!3m2!1sen!2slk!4v1738075602864!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan7.jpg",
             "images": ["./assets/property7_1.jpg", "./assets/property7_2.jpg", "./assets/property7_3.jpg", "./assets/property7_4.jpg", "./assets/property7_5.jpg", "./assets/property7_6.jpg"]
         },
@@ -149,6 +156,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=53.4508,-2.2297",
             "coordinates": [53.4508, -2.2297],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2375.988042431018!2d-2.2297!3d53.4508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTPCsDI3JzAyLjkiTiAywrAxMyc0Ni45Ilc!5e0!3m2!1sen!2slk!4v1738075673617!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan8.jpg",
             "images": ["./assets/property8_1.jpg", "./assets/property8_2.jpg", "./assets/property8_3.jpg", "./assets/property8_4.jpg", "./assets/property8_5.jpg", "./assets/property8_6.jpg"]
         },
@@ -168,6 +176,7 @@
             },
             "googleMapLink": "https://www.google.com/maps?q=52.4814,-1.8998",
             "coordinates": [52.4814, -1.8998],
+            "iframeLink": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2429.8749410299743!2d-1.8998!3d52.4814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTLCsDI4JzUzLjAiTiAxwrA1Myc1OS4zIlc!5e0!3m2!1sen!2slk!4v1738075798677!5m2!1sen!2slk",
             "floorPlan": "./assets/floorplan9.jpg",
             "images": ["./assets/property9_1.jpg", "./assets/property9_2.jpg", "./assets/property9_3.jpg", "./assets/property9_4.jpg", "./assets/property9_5.jpg", "./assets/property9_6.jpg"]
         }
